@@ -1,4 +1,5 @@
 ﻿using System;
+using MediaWorld.Domain.Models;
 
 namespace MediaWorld.Client
 {
