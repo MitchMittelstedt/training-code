@@ -15,6 +15,13 @@ namespace MediaWorld.Client
         {
             var helper = MediaSingleton.GetInstance();
             Console.WriteLine(helper);
+
+            DisplayMusic();
+        }
+        private static void DisplayMusic() 
+        {
+          Music m = new Song();
+          Console.WriteLine(m.Artist);
         }
     }
 }
