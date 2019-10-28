@@ -1,7 +1,9 @@
+using MediaWorld.Domain.Abstracts;
+
 namespace MediaWorld.Domain.Models 
 {
-  public class Song : Music 
+  public class Song : AAudio
   {
-    public string Lyrics { get; set; }
+
   }
 }
