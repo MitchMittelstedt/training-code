@@ -1,10 +1,11 @@
-namespace MediaWorld.Domain.Interfaces
+using System.Collections.Generic;
+using PizzaBox.Domain.Models;
+
+namespace PizzaBox.Domain.Interfaces
 {
   public interface ILocation
   {
     List<Order> ViewCompletedOrders();
     List<User> ViewUsers();
-    List<Sale> ViewSales();
-    List<Inventory> ViewInventory();
   }
 }

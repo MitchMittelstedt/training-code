@@ -9,10 +9,5 @@ namespace PizzaBox.Domain.Models
     {
 
     }
-
-    private void Location()
-    {
-      
-    }
   }
 }
