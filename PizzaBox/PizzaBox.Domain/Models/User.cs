@@ -1,7 +1,9 @@
+using PizzaBox.Domain.Abstracts;
+
 namespace PizzaBox.Domain.Models
 
 {
-  public class User
+  public class User : AUser
   {
     
   }
