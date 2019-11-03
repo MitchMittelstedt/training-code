@@ -1,4 +1,5 @@
 ﻿using System;
+using PizzaBox.Client.Singletons;
 using PizzaBox.Storing.Repositories;
 
 namespace PizzaBox.Client
@@ -6,9 +7,15 @@ namespace PizzaBox.Client
     internal class Program
     {
       private static UserRepository _userRepository = new UserRepository();
-        static void Main(string[] args)
+      private static LocationRepository _locationRepository = new LocationRepository();        
+      static void Main()
         {
-            Console.WriteLine("Hello World!");
+          Start();
+        }
+
+        private static void Start()
+        {
+          var menu = MenuSingleton.Instance;
         }
     }
 }

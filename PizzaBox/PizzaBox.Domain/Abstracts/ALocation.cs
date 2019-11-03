@@ -7,6 +7,7 @@ namespace PizzaBox.Domain.Abstracts
   public abstract class ALocation : AAccount
   {
     Location location;
+
     public List<Order> ViewCompletedOrders()
     {
       throw new System.NotImplementedException();

@@ -7,6 +7,9 @@ namespace PizzaBox.Domain.Abstracts
     string Username;
     string Password;
 
-    public abstract void Login();
+    public void Login()
+    {
+      return;
+    }
   }
 }

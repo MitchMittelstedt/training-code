@@ -16,10 +16,11 @@ namespace PizzaBox.Domain.Models
       order.Cost = 0;
       pizza.Cost = 0;
     }
-    public override void Login()
-    {
-      throw new System.NotImplementedException();
-    }
+
+    // public Order MakePresetOrder()
+    // {
+
+    // }
 
     public Order MakeOrder()
     {
@@ -75,7 +76,7 @@ namespace PizzaBox.Domain.Models
         switch (i)
         {
           case 1:
-            Console.WriteLine("You added Pepperoni");
+            Console.WriteLine("You added pepperoni");
             pizza.Toppings.Add("pepperoni");
             break;
           case 2:

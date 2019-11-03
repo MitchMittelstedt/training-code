@@ -15,7 +15,7 @@ namespace PizzaBox.Domain.Abstracts
       throw new NotImplementedException();
     }
 
-    public Pizza OrderPizza()
+    public Pizza MakeOrder()
     {
       throw new NotImplementedException();
     }
