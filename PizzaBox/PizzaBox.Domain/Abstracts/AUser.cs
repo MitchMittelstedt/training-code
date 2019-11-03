@@ -2,41 +2,27 @@ using System;
 using System.Collections.Generic;
 using PizzaBox.Domain.Interfaces;
 using PizzaBox.Domain.Models;
+using PizzaBox.Domain.Abstracts;
 
 namespace PizzaBox.Domain.Abstracts
 {
-  public abstract class AUser : IUser
+  public abstract class AUser : AAccount
 
   {
-    string username;
-    string password;
-    string address;
-
-    /// <summary>
-    /// acquires user information
-    /// </summary>
-
+    User user;
     public User CreateUser()
     {
-      User user = new User();
-      Console.WriteLine("Welcome, please create an account.");
-      Console.WriteLine("Username:");
-      user.username = Console.ReadLine();
-      Console.WriteLine("Password:");
-      user.password = Console.ReadLine();
-      Console.WriteLine("Address");
-      user.address = Console.ReadLine();
-      return user;
+      throw new NotImplementedException();
     }
 
     public Pizza OrderPizza()
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     public List<Order> ViewOrderHistory()
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
   }
 }

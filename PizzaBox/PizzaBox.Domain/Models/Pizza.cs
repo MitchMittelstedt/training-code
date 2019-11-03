@@ -4,18 +4,16 @@ using PizzaBox.Domain.Abstracts;
 
 namespace PizzaBox.Domain.Models
 {
-  public class Pizza
+  public class Pizza : APizza
   {
-    // List<string> Toppings;
-    // string Crust;
-    // int Size;
-    // double Cost;
-    // public Pizza()
-    // {
-    //   Toppings.Add("cheese", "sauce");
-    //   Crust = "thin";
-    //   Size = 12;
-    //   Cost = 10.00;
-    
+
+
+    public Pizza()
+    {
+      Toppings = new List<string> {"cheese", "sauce"};
+      Crust = "thin";
+      Size = 12;
+      Cost = 10.00;
+    }
   }
 }

@@ -4,17 +4,11 @@ using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Domain.Abstracts
 {
-  public abstract class AOrder : IOrder
+  public abstract class AOrder
 
   {
-    public double ComputeCost()
-    {
-      throw new System.NotImplementedException();
-    }
+    public List<Pizza> OrderedPizzas;
+    public double Cost;
 
-    public List<Pizza> ViewPizzas()
-    {
-      throw new System.NotImplementedException();
-    }
   }
 }
