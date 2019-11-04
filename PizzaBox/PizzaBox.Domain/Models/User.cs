@@ -23,8 +23,7 @@ namespace PizzaBox.Domain.Models
     // {
 
     // }
-
-    public override Order MakeOrder()
+    public override Order MakeOrder(Location location)
     {
       Pizza pizza = new Pizza();
       pizza.Cost = 10;
@@ -40,7 +39,7 @@ namespace PizzaBox.Domain.Models
       var userInput = Console.ReadLine().ToLower();
       if(userInput == "y")
       {
-        MakeOrder();
+        MakeOrder(location);
       }
       ViewOrder(order);
       return order;

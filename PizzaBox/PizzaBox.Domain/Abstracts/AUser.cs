@@ -15,7 +15,7 @@ namespace PizzaBox.Domain.Abstracts
       throw new NotImplementedException();
     }
 
-    public abstract Order MakeOrder();
+    public abstract Order MakeOrder(Location location);
 
     public void ViewOrderHistory()
     {

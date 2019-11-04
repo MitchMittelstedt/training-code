@@ -7,8 +7,8 @@ namespace PizzaBox.Storing.Repositories
 {
   public class UserRepository
   {
-    private List<AUser> _userLibrary;
-    public List<AUser> UserLibrary
+    private List<User> _userLibrary;
+    public List<User> UserLibrary
     {
       get
       {
@@ -19,18 +19,17 @@ namespace PizzaBox.Storing.Repositories
     {
       Initialize();
     }
-    private List<AUser> Initialize()
+    private void Initialize()
     {
 
       var accountFactory = new AccountFactory();
       if(_userLibrary == null)
       {
-        _userLibrary = new List<AUser>();
+        _userLibrary = new List<User>();
         User user1 = accountFactory.Create<User>("Mitch", "password");
-        Location location1 = accountFactory.Create<Location>("PizzaHat", "password");
+        _userLibrary.Add(user1);
+        
       }
-
-      return _userLibrary;
     }
 
 

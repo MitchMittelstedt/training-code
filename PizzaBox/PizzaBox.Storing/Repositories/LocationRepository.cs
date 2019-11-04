@@ -7,8 +7,8 @@ namespace PizzaBox.Storing.Repositories
 {
   public class LocationRepository
   {
-    private List<ALocation> _locationLibrary;
-    public List<ALocation> LocationLibrary
+    private List<Location> _locationLibrary;
+    public List<Location> LocationLibrary
     {
       get
       {
@@ -19,12 +19,14 @@ namespace PizzaBox.Storing.Repositories
     {
       Initialize();
     }
-    private List<ALocation> Initialize()
+    private List<Location> Initialize()
     {
-      var locationFactory = new AccountFactory();
+      var accountFactory = new AccountFactory();
       if(_locationLibrary == null)
       {
-        _locationLibrary = new List<ALocation>();
+        _locationLibrary = new List<Location>();
+        Location location1 = accountFactory.Create<Location>("PizzaHat", "password");
+        _locationLibrary.Add(location1);
       }
 
       return _locationLibrary;

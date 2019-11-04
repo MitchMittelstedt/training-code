@@ -13,7 +13,7 @@ namespace PizzaBox.Domain.Factories
       T account = new T();
       account.UserName = username;
       account.Password = password;
-      return new T();
+      return account;
     }
   }
 

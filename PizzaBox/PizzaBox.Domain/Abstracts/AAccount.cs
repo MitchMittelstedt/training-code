@@ -14,6 +14,7 @@ namespace PizzaBox.Domain.Abstracts
       UserName = Console.ReadLine();
       Console.WriteLine("Input Password");
       Password = Console.ReadLine();
+      
     }
   }
 }
