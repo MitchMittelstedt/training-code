@@ -7,8 +7,12 @@ namespace PizzaBox.Domain.Factories
 {
   public class AccountFactory
   {
-    public AAccount Create<T>() where T : ALocation, new()
+    public T Create<T>(string username, string password) where T : AAccount, new()
     {
+      
+      T account = new T();
+      account.UserName = username;
+      account.Password = password;
       return new T();
     }
   }

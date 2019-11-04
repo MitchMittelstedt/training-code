@@ -21,15 +21,10 @@ namespace PizzaBox.Storing.Repositories
     }
     private List<ALocation> Initialize()
     {
-      var locationFactory = new LocationFactory();
+      var locationFactory = new AccountFactory();
       if(_locationLibrary == null)
       {
         _locationLibrary = new List<ALocation>();
-
-        _locationLibrary.AddRange(new ALocation[]
-        {
-          locationFactory.Create<Location>()
-        });
       }
 
       return _locationLibrary;

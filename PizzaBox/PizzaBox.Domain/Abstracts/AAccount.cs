@@ -1,15 +1,19 @@
+using System;
 using PizzaBox.Domain.Interfaces;
 
 namespace PizzaBox.Domain.Abstracts
 {
   public abstract class AAccount : IAccount
   {
-    string Username;
-    string Password;
+    public string UserName { get; set; }
+    public string Password { get; set; }
 
     public void Login()
     {
-      return;
+      Console.WriteLine("Input UserName");
+      UserName = Console.ReadLine();
+      Console.WriteLine("Input Password");
+      Password = Console.ReadLine();
     }
   }
 }

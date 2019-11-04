@@ -1,11 +1,12 @@
 using System;
+using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
 using PizzaBox.Domain.Interfaces;
 
 namespace PizzaBox.Domain.Models
 
 {
-  public class User : AAccount
+  public class User : AUser
   {
 
     public Order order = new Order();
@@ -14,6 +15,7 @@ namespace PizzaBox.Domain.Models
     public User()
     {
       order.Cost = 0;
+      order.OrderedPizzas = new List<Pizza>();
       pizza.Cost = 0;
     }
 
@@ -22,7 +24,7 @@ namespace PizzaBox.Domain.Models
 
     // }
 
-    public Order MakeOrder()
+    public override Order MakeOrder()
     {
       Pizza pizza = new Pizza();
       pizza.Cost = 10;
@@ -40,6 +42,7 @@ namespace PizzaBox.Domain.Models
       {
         MakeOrder();
       }
+      ViewOrder(order);
       return order;
     }
 
@@ -114,6 +117,15 @@ namespace PizzaBox.Domain.Models
     public void AddPizzaCostToOrderCost(Order order, Pizza pizza)
     {
       order.Cost += pizza.Cost;
+    }
+
+    public void ViewOrder(Order order)
+    {
+      foreach(var item in order.OrderedPizzas)
+      {
+        string text = string.Join(", ", item.Toppings);
+        Console.WriteLine($"You ordered a pizza with this crust: {item.Crust}, this diameter: {item.Size}, and with these toppings: {text}.");
+      }
     }
   }
 }

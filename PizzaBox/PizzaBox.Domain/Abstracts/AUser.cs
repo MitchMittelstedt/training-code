@@ -9,20 +9,17 @@ namespace PizzaBox.Domain.Abstracts
   public abstract class AUser : AAccount
 
   {
-    User user;
+
     public User CreateUser()
     {
       throw new NotImplementedException();
     }
 
-    public Pizza MakeOrder()
-    {
-      throw new NotImplementedException();
-    }
+    public abstract Order MakeOrder();
 
-    public List<Order> ViewOrderHistory()
+    public void ViewOrderHistory()
     {
-      throw new NotImplementedException();
+      
     }
   }
 }

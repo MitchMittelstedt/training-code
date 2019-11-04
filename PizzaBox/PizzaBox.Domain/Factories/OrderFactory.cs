@@ -5,9 +5,9 @@ using PizzaBox.Domain.Models;
 namespace PizzaBox.Domain.Factories
 
 {
-  public class LocationFactory
+  public class OrderFactory
   {
-    public ALocation Create<T>() where T : ALocation, new()
+    public AOrder Create<T>() where T : AOrder, new()
     {
       return new T();
     }

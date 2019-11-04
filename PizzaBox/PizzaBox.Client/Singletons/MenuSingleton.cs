@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using PizzaBox.Domain.Models;
+using PizzaBox.Storing.Repositories;
+
 namespace PizzaBox.Client.Singletons
 {
   public class MenuSingleton
@@ -13,5 +18,12 @@ namespace PizzaBox.Client.Singletons
     }
 
     private MenuSingleton() {}
+
+    public void ViewOrder()
+    {
+      
+    }
+
+
   }
 }
