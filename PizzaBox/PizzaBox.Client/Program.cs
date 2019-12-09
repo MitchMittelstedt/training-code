@@ -1,23 +1,26 @@
-﻿using System;
-using PizzaBox.Client.Singletons;
-using PizzaBox.Domain.Factories;
-using PizzaBox.Domain.Models;
-using PizzaBox.Storing.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace PizzaBox.Client
 {
-    internal class Program
+    public class Program
     {
-      
-      static void Main()
+        public static void Main(string[] args)
         {
-          Start();
+            CreateHostBuilder(args).Build().Run();
         }
 
-        private static void Start()
-        {
-          var menu = MenuSingleton.Instance;
-          menu.Start();
-        }
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }

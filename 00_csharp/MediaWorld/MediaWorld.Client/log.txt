@@ -1,0 +1,9 @@
+2019-11-04 13:38:08.942 -06:00 [INF] Play Method
+2019-11-04 13:38:17.163 -06:00 [DBG] {"BitRate":256,"Duration":"00:00:00","Title":"Untitled","$type":"Book"}
+2019-11-04 13:38:17.237 -06:00 [DBG] Untitled
+2019-11-04 13:38:17.239 -06:00 [DBG] {"BitRate":256,"Duration":"00:00:00","Title":"Untitled","$type":"Song"}
+2019-11-04 13:38:17.241 -06:00 [DBG] Untitled
+2019-11-04 13:38:17.242 -06:00 [DBG] {"FrameRate":24,"Duration":"00:00:00","Title":"Untitled","$type":"Movie"}
+2019-11-04 13:38:17.243 -06:00 [DBG] Untitled
+2019-11-04 13:38:17.245 -06:00 [DBG] {"FrameRate":0,"Duration":"00:00:00","Title":"Untitled","$type":"Photo"}
+2019-11-04 13:38:17.246 -06:00 [DBG] Untitled
