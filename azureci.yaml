@@ -35,7 +35,7 @@ stages:
           - script: dotnet install --global dotnet-sonarscanner
           - script: |
               dotnet sonarscanner begin -/k:devopsmitchell /d:sonar-login=$SONAR_TOKEN /o:mitchmittelstedt
-              dotnet build
+              dotnet build 3_devops/Devops.sln
               dotnet test
               dotnet sonarscanner end /d:sonar.login-$SONAR_TOKEN
             env:
