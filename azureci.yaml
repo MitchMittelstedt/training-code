@@ -25,7 +25,7 @@ stages:
           - task: PublishCodeCoverageResult@1
             inputs:
               codeCoverageTool: cobertura
-              summaryFileLocation: ./3_devops/Devops.Test/TestResults/coverage.cobertura.xml
+              summaryFileLocation: ./3_devops/Devops.Test/TestResult/coverage.cobertura.xml
   # - stage: analyze
   #   jobs:
   #     - job:
