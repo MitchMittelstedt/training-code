@@ -19,8 +19,8 @@ stages:
         steps:
           - task: DotNetCoreCLI@2
             inputs:
-              command: 'test'
-              projects: '3_devops/Devops.sln'
+              command: test
+              projects: 3_devops/Devops.sln
               arguments: '--collect:"XPlat Code Coverage"'
           - task: PublishCodeCoverageResults@1
             inputs:
