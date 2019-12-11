@@ -36,7 +36,7 @@ stages:
           - script: |
               dotnet sonarscanner begin -/k:devopsmitchell /d:sonar-login=$SONAR_TOKEN /o:mitchmittelstedt
               dotnet build 3_devops/Devops.sln
-              dotnet test
+              dotnet test 3_devops/Devops.sln
               dotnet sonarscanner end /d:sonar.login-$SONAR_TOKEN
             env:
               SONAR_TOKEN: $(SONAR_LOGIN)
